@@ -5,7 +5,7 @@ You have multiple options depending on what you're comfortable with. The first
 is a console application (i.e. using the command prompt). For this simply copy
 the .exe files from that folder to where you want to use them, or you can also
 simply copy the source code and recompile. The other option is a desktop
-application. In the desktop folder there should be a couple installation exe
+application. In the desktop folder there should be a couple installation .exe
 files. Simply download that, run, and you're good to go!
 
 
@@ -35,4 +35,20 @@ For me this is the quicker option as it involves less clicking and just typing
 a few letters, tabbing to the correct file, and pressing enter. However, I 
 would recommend not using this option, if you're unfamiliar with using the 
 command prompt.
+
+For this option, I've include two executable programs: ctox.exe and xtoc.exe. ctox.exe 
+will be used for converting the downloaded leads to an XML format that can be used
+by the e-Bureau server. How to use it is shown below:
+
+```bash
+ctox.exe vendor_date_knox.exe vendor_date_ash.exe > vendor_date.xml
+```
+
+It is required to enter the Knoxville leads file before the Asheville leads. If there are
+no leads for a city, simple type "none" for the file name. Also, the > symbol is very important
+as it specifies to output the information to the file specified. Example below:
+
+```bash
+ctox.exe none vendor_date_ash.exe > vendor_date.xml
+```
 
