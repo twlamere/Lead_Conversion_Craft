@@ -16,6 +16,7 @@ Process
 ---------
 
 Both of the application methods will follow the same general process.
+
 1. Go to LeadConduit and download all desired leads
 2. Name them something that makes sense and helps you distinguish, e.g. vendor_date_city.csv
 3. Run them through the first conversion program
