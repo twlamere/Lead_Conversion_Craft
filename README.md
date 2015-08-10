@@ -94,8 +94,72 @@ them into the report:
 2. Compile the tabs into the tab for all leads
 3. Sort all leads by zip to split up into Knoxville and Asheville
 4. Sort all tabs by score
+5. Rename All Leads tab to desired date and Save as... "South College Data file [Date]"
 
 Now depending on how you go about this process, it can take you anywhere from 5-10 
 minutes and up to an hour. Thus I will now give some tips on how to make this
 process as efficient as possible.
 
+### Copying Each Vendor File
+
+*Note: the tips in this section will be most helpful to Windows users. Though they can
+be used on other operating systems, I am not sure of their keyboard shortcuts.*
+
+Right now you should have all your excel files open. Most people know that Ctrl+c 
+(+ just means to press keys in order simultaneously) is to copy something and 
+Ctrl+v is to paste. Here are a couple more and how to use them:
+
+- **Ctrl+c**: this copies highlighted text or cells.
+- **Ctrl+v**: this pastes copied text or cells into the highlighted section.
+- **Ctrl+Shift+[Arrow key]**: this will highlight all cells in the respective direction
+within Excel. Use this for maximum advantage by clicking in the top-left cell of content
+desired, press Ctrl+Shift+→ and Ctrl+Shift+↓ (or simply Ctrl+Shift+→+↓) to select all cells
+with content to the right and below, and then press Ctrl+c to copy all the cells highlighted.
+- **Alt+Tab**: this will switch what window is open. So, after copying cells in one Excel window
+use this to switch to the template window to paste them. And then use this to switch back
+to the CSV file to close it or to another CSV file.
+- **Ctrl+Tab**: this will switch what tab is open. After the template window is open, you can
+use this to switch which tab you're in so that you can paste the copied data from the CSV file.
+- **Alt+F4**: this will close the open window. I use this to close a CSV file after I copy its
+content.
+
+One more note for this section, when you paste the cells from the CSV to the template,
+the color scheme will be overwritten. To undo this but keep the values, press Ctrl and then v
+after pasting. So what you'll do is press Ctrl+v to paste, press Ctrl to open up paste options, 
+and then press v to select paste-by-value.
+
+### Compile the Tabs
+
+At this point all the data should be in your Excel file for the report. Use the macro below 
+to compile the content from all tabs into the All Leads tab. The macro will not work if 
+the first tab is not All Leads, second and third tabs are by city, and the rest are leads 
+by vendor. This is the main reason why I've provided my template spreadsheet.
+
+```vbnet
+Option Explicit
+Sub Combine()
+    Dim J As Integer
+    On Error Resume Next
+    
+    Application.ScreenUpdating = False
+    
+    Sheets(4).Activate
+    Range("A1").EntireRow.Select
+    Selection.Copy Destination:=Sheets(1).Range("A1")
+    
+    For J = 4 To Sheets.Count
+    
+        Sheets(J).Activate
+        If Cells(2, 2) <> "" Then
+        
+            Range("A1").Select
+            Selection.CurrentRegion.Select
+            Selection.Offset(1, 0).Resize(Selection.Rows.Count - 1).Select
+            Selection.Copy Destination:=Sheets(1).Range("A65536").End(xlUp)(2)
+        End If
+    Next
+    
+    Application.ScreenUpdating = True
+    Sheets(1).Activate
+End Sub
+```
