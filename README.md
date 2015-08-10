@@ -135,7 +135,7 @@ to compile the content from all tabs into the All Leads tab. The macro will not 
 the first tab is not All Leads, second and third tabs are by city, and the rest are leads 
 by vendor. This is the main reason why I've provided my template spreadsheet.
 
-```vbnet
+```
 Option Explicit
 Sub Combine()
     Dim J As Integer
