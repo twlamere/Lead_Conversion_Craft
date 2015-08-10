@@ -11,11 +11,11 @@ files. Simply download the installation file for your system, run, and you're go
 Note: As of 10 August 2015, I've only tested these on Windows computers, so they
 might not work on Mac OS X or Linux operating systems.
 
-Usage
-=======
 
-Process
----------
+How to Use the Applications
+=============================
+
+### Process
 
 Both of the application methods will follow the same general process.
 
@@ -30,8 +30,7 @@ Both of the application methods will follow the same general process.
 I've included the template excel spreadsheet I use within this repository for you
 along with a couple excel macros to make the process more efficient (covered later).
 
-Console Application
------------------------
+### Console Application
 
 For me this is the quicker option as it involves less clicking and just typing
 a few letters, tabbing to the correct file, and pressing enter. However, I 
@@ -48,14 +47,14 @@ ctox.exe vendor_date_knox.csv vendor_date_ash.csv > vendor_date.xml
 
 The filename for Knoxville leads must be entered before the Asheville leads. If there are
 no leads for a city, simple type "none" for the file name. Also, the > symbol is very important
-as it specifies to output the information to the file specified. Example below:
+as it specifies to output the information to the file specified. Example for singular file below:
 
 ```bash
 ctox.exe none vendor_date_ash.csv > vendor_date.xml
 ```
 
-Once you've done that for all of the leads for each vender, send them to e-Bureau to score
-and copy the output files somewhere. Then use xtoc.exe to convert the output files into 
+Once you've done that for all of the leads for each vender, send them to e-Bureau to score 
+and, then copy the output files somewhere on your computer. Then use xtoc.exe to convert the output files into 
 CSV/Excel files for each vendor.
 
 ```bash
@@ -65,14 +64,13 @@ xtoc.exe vendor_date.out.xml > vendor_date.out.csv
 *Tip: only the first few letters of a file name need to be typed. After doing that simply press tab 
 and the first file matching the beginning filename will be auto-filled in (press tab again to cycle through).*
 
-Desktop Application
-----------------------
+### Desktop Application
 
-Though a little slower (for me), this is the simpler option. After installing the file simply
+Though a little slower (for me), this is the simpler option. After installing the program simply
 open up the installed program, and everything else is pretty self explanatory. 
 
 The top half of the user interface is for converting downloaded leads to the 
-file format used by e-Bureau to scorethe leads. Simply browse to the files or 
+file format used by e-Bureau to score the leads. Simply browse to the files or 
 leave blank if a particular city has no leads for that vendor, then browse to 
 where you would like to save the resulting file and name it, and then press
 convert.
@@ -82,5 +80,22 @@ use the bottom half of the program to convert it to an Excel/CSV file for each v
 to the file and select it, browse to where you would like to save the file and name it, 
 and then just press convert once again.
 
+
 Compiling and Excel Tips
---------------------------
+===========================
+
+After following the entire process, converting leads and scoring them, you should
+now have a final CSV file for each vendor. Open all of those along with the template
+spreadsheet in this folder (make sure to have a blank template stored somewhere so 
+that you can reuse and copy it in the future). You'll now follow a process to compile
+them into the report:
+
+1. Copy each vendor CSV file into the respective tab in the template
+2. Compile the tabs into the tab for all leads
+3. Sort all leads by zip to split up into Knoxville and Asheville
+4. Sort all tabs by score
+
+Now depending on how you go about this process, it can take you anywhere from 5-10 
+minutes and up to an hour. Thus I will now give some tips on how to make this
+process as efficient as possible.
+
