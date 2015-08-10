@@ -175,7 +175,6 @@ headers as my template file has (another major reason I provided my template spr
 
 ```vba
 Sub Sort_All()
-
     Dim ws As Worksheet
     
     Application.ScreenUpdating = False
