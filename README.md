@@ -94,7 +94,8 @@ them into the report:
 2. Compile the tabs into the tab for all leads
 3. Sort all leads by zip to split up into Knoxville and Asheville
 4. Sort all tabs by score
-5. Rename All Leads tab to desired date and Save as... "South College Data file [Date]"
+5. Rename "All Leads" tab to desired date and Save as... "South College Data file [Date]"
+6. You're all done! Although, I would double-check that the numbers of leads are correct, etc.
 
 Now depending on how you go about this process, it can take you anywhere from 5-10 
 minutes and up to an hour. Thus I will now give some tips on how to make this
@@ -128,10 +129,10 @@ the color scheme will be overwritten. To undo this but keep the values, press Ct
 after pasting. So what you'll do is press Ctrl+v to paste, press Ctrl to open up paste options, 
 and then press v to select paste-by-value.
 
-### Compile the Tabs
+### Combining Tabs
 
 At this point all the data should be in your Excel file for the report. Use the macro below 
-to compile the content from all tabs into the All Leads tab. The macro will not work if 
+to compile the content from all tabs into the All Leads tab. **The macro will not work** if 
 the first tab is not All Leads, second and third tabs are by city, and the rest are leads 
 by vendor. This is the main reason why I've provided my template spreadsheet.
 
@@ -163,3 +164,50 @@ Sub Combine()
     Sheets(1).Activate
 End Sub
 ```
+
+### Sort All Tabs by Score
+
+After everything is in the spreadsheet and after you've split up All Leads by zipcode
+and put them in their respective tabs, you'll have a bunch of unsorted data in all your
+tabs. To sort them by score you could go into each tab one by one, but that would take
+a while. Instead use the macro below. This macro will only work if you used the same
+headers as my template file has (another major reason I provided my template spreadsheet).
+
+```vba
+Sub Sort_All()
+
+    Dim ws As Worksheet
+    
+    Application.ScreenUpdating = False
+    
+    For Each ws In ActiveWorkbook.Worksheets
+        ws.Activate
+        Columns("B:B").Select
+        ActiveWorkbook.ActiveSheet.Sort.SortFields.Clear
+        ActiveWorkbook.ActiveSheet.Sort.SortFields.Add Key:=Range _
+            ("B1"), SortOn:=xlSortOnValues, Order:=xlDescending, DataOption:= _
+            xlSortNormal
+        With ActiveWorkbook.ActiveSheet.Sort
+        .SetRange Range("A2:I1048576")
+        .Header = xlNo
+        .MatchCase = False
+        .Orientation = xlTopToBottom
+        .SortMethod = xlPinYin
+        .Apply
+        End With
+        Cells(1, 1).Select
+    Next
+    
+    Application.ScreenUpdating = True
+    Sheets(1).Activate
+End Sub
+```
+
+# Using Macros and Saving Them for Future Use
+
+First make sure you have the Developer option in Excel (it'll be at the tope where File,
+Home, Insert, etc. are). If you don't, go to File->Options->"Customize Ribbon" and then 
+check Developer and press OK. You could copy and paste the macros above into new macros
+you create each time and then run them, but that would not be ideal. Instead we want
+to copy and paste them once and be able to use them everytime in the future without hassle.
+To do this, is a little complicated. [Check out this page that describes how.](https://support.office.com/en-ca/article/Copy-your-macros-to-a-Personal-Macro-Workbook-aa439b90-f836-4381-97f0-6e4c3f5ee566 "Save Macros for Future Use")
