@@ -1,4 +1,4 @@
-Intallation
+Installation
 =============
 
 You have multiple options depending on what you're comfortable with. The first
