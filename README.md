@@ -203,7 +203,7 @@ Sub Sort_All()
 End Sub
 ```
 
-# Using Macros and Saving Them for Future Use
+### Using Macros and Saving Them for Future Use
 
 First make sure you have the Developer option in Excel (it'll be at the tope where File,
 Home, Insert, etc. are). If you don't, go to File->Options->"Customize Ribbon" and then 
