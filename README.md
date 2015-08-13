@@ -28,7 +28,7 @@ Both of the application methods will follow the same general process.
 6. Run the output files through the second conversion program
 7. Compile the resulting CSV files into an Excel spreadsheet (for tips see section below)
 
-I've included the template excel spreadsheet I use within this repository for you
+I've included the [template excel spreadsheet](https://github.com/twlamere/Lead_Conversion_Craft/raw/master/South%20College%20Data%20file%20Month%20dd.xlsx "Excel Template") I use within this repository for you
 along with a couple excel macros to make the process more efficient (covered later).
 
 ### Console Application
@@ -86,8 +86,8 @@ Compiling and Excel Tips
 ===========================
 
 After following the entire process, converting leads and scoring them, you should
-now have a final CSV file for each vendor. Open all of those along with the template
-spreadsheet in this folder (make sure to have a blank template stored somewhere so 
+now have a final CSV file for each vendor. Open all of those along with the [template
+spreadsheet](https://github.com/twlamere/Lead_Conversion_Craft/raw/master/South%20College%20Data%20file%20Month%20dd.xlsx "Excel Template") (make sure to have a blank template stored somewhere so 
 that you can reuse and copy it in the future). You'll now follow a process to compile
 them into the report:
 
