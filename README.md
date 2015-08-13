@@ -8,7 +8,7 @@ simply copy the source code and recompile. The other option is a desktop
 application. There a couple download links to these installation files below.
 Simply download the installation file for your system, run, and you're good to go!
 
-- [Mac Install](https://app.box.com/leadconverisoncraft-mac "Install Lead Conversion for Mac OS X")
+- [Mac Install](https://app.box.com/leadconverisoncraft-mac "Install Lead Conversion for Mac OS X"): Go to "More" and then click "Download." You may have to extract a zip file afterword; otherwise, it should be immediately runnable.
 - [Windows Install](https://github.com/twlamere/Lead_Conversion_Craft/raw/master/desktop_app/LeadConversionInstaller.exe "Install Lead Converstion for Windows")
 
 
