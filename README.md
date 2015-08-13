@@ -5,11 +5,12 @@ You have multiple options depending on what you're comfortable with. The first
 is a console application (i.e. using the command prompt). For this simply copy
 the .exe files from that folder to where you want to use them, or you can also
 simply copy the source code and recompile. The other option is a desktop
-application. In the desktop folder there should be a couple installation .exe
-files. Simply download the installation file for your system, run, and you're good to go!
+application. There a couple download links to these installation files below.
+Simply download the installation file for your system, run, and you're good to go!
 
-Note: As of 10 August 2015, I've only tested these on Windows computers, so they
-might not work on Mac OS X or Linux operating systems.
+[Mac Install](https://app.box.com/leadconverisoncraft-mac "Install Lead Conversion for Mac OS X")
+[Windows Install](https://github.com/twlamere/Lead_Conversion_Craft/raw/master/desktop_app/LeadConversionInstaller.exe "Install Lead Converstion for Windows")
+
 
 
 How to Use the Applications
