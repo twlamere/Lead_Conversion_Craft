@@ -16,7 +16,7 @@ application. There a couple download links to these installation files below.
 		cd Downloads/
 		hdiutil attach leadconversion.dmg -shadow
 		```
-	    Note: Instead of "Downloads/" put the filepath of wherever you download the .dmg file earlier.
+	    Note: Instead of "Downloads/" put the filepath of wherever you downloaded the .dmg file earlier.
   4. Minimize everything you have open so that you can view the desktop.
   5. There should be something on your desktop called "leadconversion" with the image of a disk drive. Open it.
   6. Once it's open drag the file called leadconversion into the Applications folder.
