@@ -25,7 +25,7 @@ application. There a couple download links to these installation files below.
 
 - [Windows Install](https://github.com/twlamere/Lead_Conversion_Craft/raw/master/desktop_app/LeadConversionInstaller.exe "Install Lead Converstion for Windows")
   1. Download the file above.
-  2. Follow the onscreen instructions and then run the executable file when done.
+  2. Run it and follow the onscreen instructions.
   
 
 How to Use the Applications
