@@ -22,6 +22,7 @@ application. There a couple download links to these installation files below.
   6. Once it's open drag the file called leadconversion into the Applications folder.
   7. Now open up the Applications folder in what's in front of you and scroll down until you find leadconversion.
   8. Right-click it and then select open. This will allow you to get past the unknown developer warning that comes up when you simply double-click.
+
 - [Windows Install](https://github.com/twlamere/Lead_Conversion_Craft/raw/master/desktop_app/LeadConversionInstaller.exe "Install Lead Converstion for Windows")
   1. Download the file above.
   2. Follow the onscreen instructions and then run the executable file when done.
