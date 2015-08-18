@@ -6,12 +6,25 @@ is a console application (i.e. using the command prompt). For this simply copy
 the .exe files from that folder to where you want to use them, or you can also
 simply copy the source code and recompile. The other option is a desktop
 application. There a couple download links to these installation files below.
-Simply download the installation file for your system, run, and you're good to go!
 
 - [Mac Install](https://github.com/twlamere/Lead_Conversion_Craft/raw/master/desktop_app/leadconversion.dmg "Install Lead Conversion for Mac OS X")
+  1. Download the file linked above.
+  2. Open a terminal (most likely in Launchpad->Other).
+  3. Type the following commands:
+     ```bash
+     cd Downloads/
+	 hdiutil attach leadconversion.dmg -shadow
+	 ```
+	 Note: Instead of "Downloads/" put the filepath of wherever you download the .dmg file earlier.
+  4. Minimize everything you have open so that you can view the desktop.
+  5. There should be something on your desktop called "leadconversion" with the image of a disk drive. Open it.
+  6. Once it's open drag the file called leadconversion into the Applications folder.
+  7. Now open up the Applications folder in what's in front of you and scroll down until you find leadconversion.
+  8. Right-click it and then select open. This will allow you to get past the unknown developer warning that comes up when you simply double-click.
 - [Windows Install](https://github.com/twlamere/Lead_Conversion_Craft/raw/master/desktop_app/LeadConversionInstaller.exe "Install Lead Converstion for Windows")
-
-
+  1. Download the file above.
+  2. Follow the onscreen instructions and then run the executable file when done.
+  
 
 How to Use the Applications
 =============================
