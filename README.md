@@ -11,11 +11,12 @@ application. There a couple download links to these installation files below.
   1. Download the file linked above.
   2. Open a terminal (most likely in Launchpad->Other).
   3. Type the following commands:
-     ```bash
-     cd Downloads/
-	 hdiutil attach leadconversion.dmg -shadow
-	 ```
-	 Note: Instead of "Downloads/" put the filepath of wherever you download the .dmg file earlier.
+  
+		```bash
+		cd Downloads/
+		hdiutil attach leadconversion.dmg -shadow
+		```
+	    Note: Instead of "Downloads/" put the filepath of wherever you download the .dmg file earlier.
   4. Minimize everything you have open so that you can view the desktop.
   5. There should be something on your desktop called "leadconversion" with the image of a disk drive. Open it.
   6. Once it's open drag the file called leadconversion into the Applications folder.
