@@ -10,8 +10,7 @@ application. There a couple download links to these installation files below.
 - [Mac Install](https://github.com/twlamere/Lead_Conversion_Craft/raw/master/desktop_app/leadconversion.dmg "Install Lead Conversion for Mac OS X")
   1. Download the file linked above.
   2. Open a terminal (most likely in Launchpad->Other).
-  3. Type the following commands:
-  
+  3. Type the following commands:  
 		```bash
 		cd Downloads/
 		hdiutil attach leadconversion.dmg -shadow
